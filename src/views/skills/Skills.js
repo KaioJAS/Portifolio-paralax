@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 // skills
 import { skills } from "./db-skills";
@@ -22,8 +22,8 @@ const Skills = () => {
     return (
         <div className="pt-3 pb-3" id="skills">
             <h1 className="text-center font-details-b pb-4 text-white">TECH SKILLS</h1>
-            <CardDeck>
-                <div>
+            <Row className="d-flex justify-content-around">
+                <Col md={3} sm={6}>
                     <Card className="focus mb-2" style={glassStyle}>
                         <Card.Body>
                             <Card.Title className="text-center  card-title text-white" >Version Control</Card.Title>
@@ -55,9 +55,9 @@ const Skills = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </div>
+                </Col>
 
-                <div>
+                <Col md={3} sm={6}>
                     <Card className="focus mb-2" style={glassStyle}>
                         <Card.Body>
                             <Card.Title className="text-center  card-title text-white">Backend</Card.Title>
@@ -73,8 +73,8 @@ const Skills = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </div>
-                <div>
+                </Col>
+                <Col md={3} sm={6}>
                     <Card className="focus mb-2" style={glassStyle}>
                         <Card.Body>
                             <Card.Title className="text-center  card-title text-white">Cloud & DevOps</Card.Title>
@@ -90,9 +90,9 @@ const Skills = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </div>
+                </Col>
 
-                <div>
+                <Col md={3} sm={6}>
                     <Card className="focus mb-2" style={glassStyle}>
                         <Card.Body>
                             <Card.Title className="text-center  card-title text-white">Frontend & UI</Card.Title>
@@ -108,8 +108,8 @@ const Skills = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </div>
-            </CardDeck>
+                </Col>
+            </Row>
         </div>
     );
 };
